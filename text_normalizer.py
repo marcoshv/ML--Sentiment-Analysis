@@ -11,8 +11,8 @@ from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 porter = PorterStemmer()
 tokenizer = ToktokTokenizer()
-stopword_list = stopwords.words('english')
-nlp = spacy.load('en_core_web_sm')
+stopword_list = stopwords.words('english') #  Stopwords must be downloaded using " nltk.download('stopwords')" once in jupyternotebook, the comment or delete the line
+nlp = spacy.load('en_core_web_sm') # 'en_core_web_sm' must be downloaded using "python -m spacy download en_core_web_sm" once in jupyternotebook, the comment or delete the line
 
 def remove_html_tags(text):
     text_without_tags = re.sub('<[^<]+?>', '', text)
